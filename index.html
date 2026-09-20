@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoTrack | Smart Carbon Footprint Tracker</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Chart -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        <div class="logo-icon">
+            <i class="fa-solid fa-leaf"></i>
+        </div>
+
+        <span>Eco<span class="green">Track</span></span>
+    </div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#calculator">Calculator</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#tips">Eco Tips</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <a href="#calculator" class="nav-button">
+        Start Tracking
+    </a>
+
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="home">
+
+    <div class="hero-content">
+
+        <div class="badge">
+            <i class="fa-solid fa-earth-americas"></i>
+            Build a Greener Future
+        </div>
+
+        <h1>
+            Know Your Impact.
+            <span>Change Your Future.</span>
+        </h1>
+
+        <p>
+            EcoTrack helps you understand your everyday carbon footprint,
+            track your environmental impact and discover simple ways
+            to live more sustainably.
+        </p>
+
+        <div class="hero-buttons">
+
+            <a href="#calculator" class="primary-btn">
+                Calculate My Footprint
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <a href="#about" class="secondary-btn">
+                Learn More
+            </a>
+
+        </div>
+
+        <div class="hero-stats">
+
+            <div>
+                <strong>3+</strong>
+                <span>Impact Areas</span>
+            </div>
+
+            <div>
+                <strong>24/7</strong>
+                <span>Track Your Impact</span>
+            </div>
+
+            <div>
+                <strong>100%</strong>
+                <span>Eco Focused</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="earth-card">
+
+            <div class="earth-circle">
+                🌍
+            </div>
+
+            <h3>Your Planet</h3>
+
+            <p>
+                Every small action matters.
+            </p>
+
+            <div class="mini-progress">
+                <span></span>
+            </div>
+
+            <small>
+                Make today's choices count.
+            </small>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= WHY SECTION ================= -->
+
+<section class="why">
+
+    <div class="section-heading">
+
+        <span>WHY ECOTRACK?</span>
+
+        <h2>
+            Small Changes.
+            <br>
+            <strong>Big Environmental Impact.</strong>
+        </h2>
+
+        <p>
+            Your everyday choices affect the planet.
+            EcoTrack makes those impacts easier to understand.
+        </p>
+
+    </div>
+
+
+    <div class="feature-grid">
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-chart-line"></i>
+            </div>
+
+            <h3>Track Your Impact</h3>
+
+            <p>
+                Monitor your estimated carbon emissions
+                from transportation, electricity and waste.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-lightbulb"></i>
+            </div>
+
+            <h3>Get Smart Tips</h3>
+
+            <p>
+                Discover practical suggestions that can
+                help you reduce your environmental impact.
+            </p>
+
+        </div>
+
+
+        <div class="feature-card">
+
+            <div class="feature-icon">
+                <i class="fa-solid fa-seedling"></i>
+            </div>
+
+            <h3>Build Better Habits</h3>
+
+            <p>
+                Turn sustainable choices into everyday
+                habits and work towards a greener lifestyle.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CALCULATOR ================= -->
+
+<section class="calculator-section" id="calculator">
+
+    <div class="section-heading">
+
+        <span>CARBON CALCULATOR</span>
+
+        <h2>
+            Calculate Your
+            <strong>Daily Footprint</strong>
+        </h2>
+
+        <p>
+            Enter your approximate daily activities
+            to estimate your carbon emissions.
+        </p>
+
+    </div>
+
+
+    <div class="calculator-layout">
+
+        <!-- FORM -->
+
+        <div class="calculator-card">
+
+            <div class="card-title">
+
+                <div>
+                    <h3>Your Daily Activities</h3>
+
+                    <p>
+                        Enter approximate values
+                    </p>
+                </div>
+
+                <i class="fa-solid fa-calculator"></i>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-car"></i>
+                    Transportation
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="number"
+                        id="transport"
+                        placeholder="Distance travelled"
+                        min="0"
+                    >
+
+                    <span>km/day</span>
+
+                </div>
+
+                <small>
+                    Average distance travelled by car or other fuel-based transport.
+                </small>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-bolt"></i>
+                    Electricity
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="number"
+                        id="electricity"
+                        placeholder="Electricity used"
+                        min="0"
+                    >
+
+                    <span>kWh/day</span>
+
+                </div>
+
+                <small>
+                    Approximate electricity consumed in your home.
+                </small>
+
+            </div>
+
+
+            <div class="input-group">
+
+                <label>
+                    <i class="fa-solid fa-trash"></i>
+                    Waste
+                </label>
+
+                <div class="input-wrapper">
+
+                    <input
+                        type="number"
+                        id="waste"
+                        placeholder="Waste generated"
+                        min="0"
+                    >
+
+                    <span>kg/day</span>
+
+                </div>
+
+                <small>
+                    Approximate household waste generated per day.
+                </small>
+
+            </div>
+
+
+            <button class="calculate-btn"
+                    onclick="calculateFootprint()">
+
+                Calculate My Footprint
+
+                <i class="fa-solid fa-arrow-right"></i>
+
+            </button>
+
+        </div>
+
+
+        <!-- RESULT -->
+
+        <div class="result-card">
+
+            <div class="result-top">
+
+                <div>
+
+                    <span>ESTIMATED DAILY FOOTPRINT</span>
+
+                    <div class="big-number">
+
+                        <span id="totalCarbon">0</span>
+
+                        <small>
+                            kg CO₂
+                        </small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="leaf-result">
+                    🌱
+                </div>
+
+            </div>
+
+
+            <div class="score-container">
+
+                <div class="score-title">
+
+                    <span>Green Score</span>
+
+                    <strong id="greenScore">--</strong>
+
+                </div>
+
+                <div class="score-bar">
+
+                    <span id="scoreBar"></span>
+
+                </div>
+
+            </div>
+
+
+            <div class="result-message"
+                 id="message">
+
+                Complete the calculator to see
+                your environmental impact.
+
+            </div>
+
+
+            <div class="result-breakdown">
+
+                <div>
+                    <span>Transport</span>
+                    <strong id="transportResult">0</strong>
+                </div>
+
+                <div>
+                    <span>Electricity</span>
+                    <strong id="electricityResult">0</strong>
+                </div>
+
+                <div>
+                    <span>Waste</span>
+                    <strong id="wasteResult">0</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= DASHBOARD ================= -->
+
+<section class="dashboard" id="dashboard">
+
+    <div class="section-heading">
+
+        <span>YOUR ECO DASHBOARD</span>
+
+        <h2>
+            Understand Your
+            <strong>Impact</strong>
+        </h2>
+
+        <p>
+            See where your estimated emissions are coming from.
+        </p>
+
+    </div>
+
+
+    <div class="dashboard-grid">
+
+        <div class="chart-card">
+
+            <div class="card-heading">
+
+                <div>
+                    <h3>Emission Breakdown</h3>
+                    <p>Based on your latest calculation</p>
+                </div>
+
+                <i class="fa-solid fa-chart-pie"></i>
+
+            </div>
+
+            <div class="chart-box">
+
+                <canvas id="carbonChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+        <div class="stats-column">
+
+            <div class="stat-card">
+
+                <div class="stat-icon transport">
+                    <i class="fa-solid fa-car"></i>
+                </div>
+
+                <div>
+                    <span>Transport</span>
+                    <strong id="dashTransport">0 kg</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon electricity">
+                    <i class="fa-solid fa-bolt"></i>
+                </div>
+
+                <div>
+                    <span>Electricity</span>
+                    <strong id="dashElectricity">0 kg</strong>
+                </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon waste">
+                    <i class="fa-solid fa-recycle"></i>
+                </div>
+
+                <div>
+                    <span>Waste</span>
+                    <strong id="dashWaste">0 kg</strong>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= IMPACT ================= -->
+
+<section class="impact">
+
+    <div class="impact-content">
+
+        <div>
+
+            <span class="section-label">
+                YOUR IMPACT MATTERS
+            </span>
+
+            <h2>
+                Every Sustainable Choice
+                <strong>Counts.</strong>
+            </h2>
+
+            <p>
+                Reducing emissions is not about making
+                your life perfect. It is about making
+                better choices whenever possible.
+            </p>
+
+            <div class="impact-list">
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Reduce unnecessary travel
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Save electricity
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Reuse and recycle
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-check"></i>
+                    Choose sustainable alternatives
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="impact-visual">
+
+            <div class="tree-circle">
+                🌳
+            </div>
+
+            <div class="floating-card card-one">
+                <i class="fa-solid fa-leaf"></i>
+                Less Waste
+            </div>
+
+            <div class="floating-card card-two">
+                <i class="fa-solid fa-sun"></i>
+                Save Energy
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TIPS ================= -->
+
+<section class="tips" id="tips">
+
+    <div class="section-heading">
+
+        <span>LIVE GREENER</span>
+
+        <h2>
+            Simple Tips for a
+            <strong>Greener Life</strong>
+        </h2>
+
+        <p>
+            Small daily actions can become powerful habits.
+        </p>
+
+    </div>
+
+
+    <div class="tips-grid">
+
+        <div class="tip-card">
+
+            <div class="tip-number">01</div>
+
+            <i class="fa-solid fa-bicycle"></i>
+
+            <h3>Choose Cleaner Transport</h3>
+
+            <p>
+                Walk, cycle or use public transportation
+                whenever it is practical.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div class="tip-number">02</div>
+
+            <i class="fa-solid fa-plug"></i>
+
+            <h3>Save Energy</h3>
+
+            <p>
+                Switch off unused appliances and lights
+                to reduce unnecessary energy consumption.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div class="tip-number">03</div>
+
+            <i class="fa-solid fa-recycle"></i>
+
+            <h3>Reduce & Reuse</h3>
+
+            <p>
+                Avoid unnecessary single-use products
+                and reuse items whenever possible.
+            </p>
+
+        </div>
+
+
+        <div class="tip-card">
+
+            <div class="tip-number">04</div>
+
+            <i class="fa-solid fa-tree"></i>
+
+            <h3>Protect Green Spaces</h3>
+
+            <p>
+                Support tree planting and help protect
+                local natural environments.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="how" id="about">
+
+    <div class="section-heading">
+
+        <span>HOW ECOTRACK WORKS</span>
+
+        <h2>
+            Three Steps to a
+            <strong>Greener You</strong>
+        </h2>
+
+    </div>
+
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="step-number">
+                1
+            </div>
+
+            <h3>Enter Your Data</h3>
+
+            <p>
+                Add your approximate daily transport,
+                electricity and waste information.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                2
+            </div>
+
+            <h3>Understand Your Impact</h3>
+
+            <p>
+                EcoTrack estimates your daily carbon
+                footprint and shows its main sources.
+            </p>
+
+        </div>
+
+
+        <div class="step">
+
+            <div class="step-number">
+                3
+            </div>
+
+            <h3>Take Action</h3>
+
+            <p>
+                Use personalized eco-friendly suggestions
+                to build better everyday habits.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+    <div>
+
+        <div class="cta-icon">
+            🌱
+        </div>
+
+        <h2>
+            The Planet Doesn't Need
+            <br>
+            <span>A Few Perfect People.</span>
+        </h2>
+
+        <p>
+            It needs millions of people making better choices.
+        </p>
+
+        <a href="#calculator" class="primary-btn">
+            Start Your Eco Journey
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-content">
+
+        <div class="footer-brand">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    <i class="fa-solid fa-leaf"></i>
+                </div>
+
+                <span>Eco<span class="green">Track</span></span>
+
+            </div>
+
+            <p>
+                Track your impact.
+                Build better habits.
+                Protect our planet.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Explore</h4>
+
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#tips">Eco Tips</a>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <h4>Focus Areas</h4>
+
+            <span>Transportation</span>
+            <span>Energy</span>
+            <span>Waste</span>
+            <span>Sustainability</span>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 EcoTrack. Built for a greener future.
+        </p>
+
+        <p>
+            🌍 Every action counts.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
